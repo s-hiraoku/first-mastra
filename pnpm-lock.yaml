@@ -20,6 +20,9 @@ importers:
       '@mastra/memory':
         specifier: ^0.3.1
         version: 0.3.1(openapi-types@12.1.3)(react@19.1.0)
+      '@mastra/rag':
+        specifier: ^0.1.20
+        version: 0.1.20(ai@4.3.13(react@19.1.0)(zod@3.24.4))(openapi-types@12.1.3)(react@19.1.0)
       zod:
         specifier: ^3.24.4
         version: 3.24.4
@@ -608,6 +611,11 @@ packages:
   '@mastra/memory@0.3.1':
     resolution: {integrity: sha512-f56IsfUvGTFEYxjMAVSvTui77O8ZljAIkRBwTlq9McRd9kk7EInz+ZV0jCiEhBW1QCV/xPhC1q8qyo646RjOzw==}
 
+  '@mastra/rag@0.1.20':
+    resolution: {integrity: sha512-6KRIhDQeiKCuCoSnhup7KhNbjMJvDdzAXmbVMR4Ktvq6RQa+pNfFTEPLXbscqN7BRYeqYcpOkNWN3L7jJV1ktQ==}
+    peerDependencies:
+      ai: ^4.0.0
+
   '@mastra/server@2.0.1':
     resolution: {integrity: sha512-Iiccd/fncA0eIpcw9+xd+6gP0Y6yJxVMFaUPABbCuR2WDOasEBr4FKsh4Qi1wT2nX87KBfx7ry25sNY5aoCzmQ==}
     peerDependencies:
@@ -618,6 +626,10 @@ packages:
 
   '@neon-rs/load@0.1.82':
     resolution: {integrity: sha512-H4Gu2o5kPp+JOEhRrOQCnJnf7X6sv9FBLttM/wSbb4efsgFWeHzfU/ItZ01E5qqEk+U6QGdeVO7lxXIAtYHr5A==}
+
+  '@noble/hashes@1.8.0':
+    resolution: {integrity: sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A==}
+    engines: {node: ^14.21.3 || >=16}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1082,6 +1094,9 @@ packages:
     engines: {node: '>=14'}
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
+
+  '@paralleldrive/cuid2@2.2.2':
+    resolution: {integrity: sha512-ZOBkgDwEdoYVlSeRbYYXs0S9MejQofiVYoTbKzy/6GQa39/q5tQU2IX46+shYnUkpEl3wc+J6wRlar7r2EK2xA==}
 
   '@protobufjs/aspromise@1.1.2':
     resolution: {integrity: sha512-j+gKExEuLmKwvz3OgROXtrJ2UG2x8Ch2YZUxahh+s1F2HZ+wAceUNLkvy6zKCPVRkU++ZWQrdxsUeQXmcg4uoQ==}
@@ -2170,6 +2185,9 @@ packages:
     resolution: {integrity: sha512-PCibtFdxa7/Ldud9yddl1G81GjYaeMYYTq4ywSaNsYbB1Lug4mwtOMJf2WXykL0pntYwmpRJeOI3NmoDgD+Jxw==}
     engines: {node: '>=16.9.0'}
 
+  html-entities@2.6.0:
+    resolution: {integrity: sha512-kig+rMn/QOVRvr7c86gQ8lWXq+Hkv6CbAH1hLu+RG338StTpE8Z0b44SDVaqVu7HGKf27frdmUYEs9hTUX/cLQ==}
+
   html-void-elements@3.0.0:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
 
@@ -2447,6 +2465,9 @@ packages:
   node-fetch@3.3.2:
     resolution: {integrity: sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  node-html-better-parser@1.4.11:
+    resolution: {integrity: sha512-rXYKBD30q6Iw/Y8o2ueJILB29Z3RrqQQN/U2PDg4Iz2TSZP/KmqdcGp+pl8o5uYZlvIKh+A4UfOK98pKIb3cRw==}
 
   node-releases@2.0.19:
     resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
@@ -4031,6 +4052,35 @@ snapshots:
       - valibot
       - zod-openapi
 
+  '@mastra/rag@0.1.20(ai@4.3.13(react@19.1.0)(zod@3.24.4))(openapi-types@12.1.3)(react@19.1.0)':
+    dependencies:
+      '@mastra/core': 0.9.1(openapi-types@12.1.3)(react@19.1.0)(zod@3.24.4)
+      '@paralleldrive/cuid2': 2.2.2
+      ai: 4.3.13(react@19.1.0)(zod@3.24.4)
+      js-tiktoken: 1.0.20
+      node-html-better-parser: 1.4.11
+      pathe: 2.0.3
+      zod: 3.24.4
+    transitivePeerDependencies:
+      - '@hono/arktype-validator'
+      - '@hono/effect-validator'
+      - '@hono/typebox-validator'
+      - '@hono/valibot-validator'
+      - '@hono/zod-validator'
+      - '@sinclair/typebox'
+      - '@valibot/to-json-schema'
+      - arktype
+      - aws-crt
+      - bufferutil
+      - effect
+      - encoding
+      - openapi-types
+      - react
+      - supports-color
+      - utf-8-validate
+      - valibot
+      - zod-openapi
+
   '@mastra/server@2.0.1(@mastra/core@0.9.1(openapi-types@12.1.3)(react@19.1.0)(zod@3.24.4))':
     dependencies:
       '@mastra/core': 0.9.1(openapi-types@12.1.3)(react@19.1.0)(zod@3.24.4)
@@ -4038,6 +4088,8 @@ snapshots:
   '@neon-rs/load@0.0.4': {}
 
   '@neon-rs/load@0.1.82': {}
+
+  '@noble/hashes@1.8.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -4722,6 +4774,10 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
+
+  '@paralleldrive/cuid2@2.2.2':
+    dependencies:
+      '@noble/hashes': 1.8.0
 
   '@protobufjs/aspromise@1.1.2': {}
 
@@ -5847,6 +5903,8 @@ snapshots:
 
   hono@4.7.8: {}
 
+  html-entities@2.6.0: {}
+
   html-void-elements@3.0.0: {}
 
   https-proxy-agent@7.0.6:
@@ -6146,6 +6204,10 @@ snapshots:
       data-uri-to-buffer: 4.0.1
       fetch-blob: 3.2.0
       formdata-polyfill: 4.0.10
+
+  node-html-better-parser@1.4.11:
+    dependencies:
+      html-entities: 2.6.0
 
   node-releases@2.0.19: {}
 
